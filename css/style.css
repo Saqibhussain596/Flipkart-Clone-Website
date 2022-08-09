@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300&family=Syne+Tactile&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@keyframes slider-animate{
+    20%{
+        transform: translate(-105vw);
+    }
+    40%{
+        transform: translate(-210vw);
+    }
+    60%{
+        transform: translate(-310vw);
+    }
+    80%{
+        transform: translate(-410vw);
+    }
+    100%{
+        transform: translate(0vw);
+    }
+}
+:root{
+    --main--bg-color:#2874f0;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: var(--main--bg-color);
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 0px 30px;
+}
+nav ul{
+    height:100%;
+    list-style: none;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+}
+nav ul li a:hover{
+    color: aquamarine;
+}
+.logo{
+    display: flex;    
+}
+.logo img{
+    padding: 0 20px;
+}
+.search{
+    height: 4vh;
+    display: flex;
+    align-items:center;
+    margin: 0 40px;
+}
+.search input{
+    width: 30vw;
+    height: 100%;
+    border-radius: 4px;
+    padding: 0px 10px;
+}
+button, .search-icon{
+    height: 85%;
+}
+.container{
+    min-height: calc(100vh - 10vh - 12vh); 
+    overflow: hidden;
+    background-color:rgb(235, 235, 225);
+}
+.slider{
+    background-color:rgb(235, 235, 225);
+    margin-bottom: 2vh;
+    display: inline-flex;
+    justify-content: center;
+    overflow: hidden;
+    animation-name: slider-animate;
+    animation-timing-function: ease-out;
+    animation-delay: 2s;
+    animation-duration: 30s;
+    animation-iteration-count:infinite;
+}
+.card{
+    padding: 1vh 1vw;
+    background-color: white;
+    border-radius: 5px;
+    margin: 3vh 2vw;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+} 
+.cards{
+    display:flex;
+    justify-content: left;
+    overflow: hidden;
+}  
+.cards .card-item .lines{
+    text-align: center;
+    line-height: 23px;
+}
+.card-item{
+    margin: 0 2vh;
+    cursor: pointer;
+}
+.card-item img:hover{
+       transform: scale(1.11);
+       
+}
+footer{
+    height: 12vh;
+    background-color: var(--main--bg-color);
+    color: white;
+}
